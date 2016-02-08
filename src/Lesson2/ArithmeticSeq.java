@@ -8,28 +8,53 @@ public class ArithmeticSeq {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		//HW
+		/*
+		 * To create an arithmetic sequence and a series
+		 * input:  the first term, a1, and the number of terms, n, and common difference, c ==>  need a Scanner
+		 * 		a1 and n are both int 
+		 * 
+		 * Use for-loop to print
+		 * arithmetic sequences:  1,3,5,7,9..., 19
+		 * Arithmetic series: result of sum of all the sequences.
+		 * 
+		 * Ex:
+		 * Enter the staring no: 
+			1
+			Enter the number of terms: 
+			20
+			Enter the common difference: 
+			2
+			The sequence is:
+			1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39
+		 * 
+		 */
 		
-		Scanner inp = new Scanner(System.in);
-		System.out.println("Arithmetic Sequence");
-		System.out.println("Enter the initial number.");
+		int start=0;
+		int end = 0;
+		int d = 0;
 		
-		int a0=inp.nextInt();
-		System.out.println("Enter a second number.");
-		int endNo=inp.nextInt();
+		Scanner series = new Scanner(System.in);
+		
+		System.out.println("Enter the staring no: ");
+		start = series.nextInt();
+		
+		System.out.println("Enter the number of terms: ");
+		end = series.nextInt();
 
-	
-		System.out.println("Arithmetic Seq from "+a0);
-		for(int i = 0; i <=(endNo-a0); i++) {
-			System.out.print(a0+i+",");
-		}
-		System.out.println("\n");
+		System.out.println("Enter the common difference: ");
+		d = series.nextInt();
 
-		System.out.println("Arithmetic Seq increment by 2 from "+a0);
-		for(int i = 0; i <=(endNo-a0); i+=2) {
-			System.out.print(a0+i+",");
+		System.out.println("The sequence is:");	
+		
+		int sum = start;
+		for(int i = 1; i < end; i++) {
+			System.out.print(sum+", ");	
+			sum = sum + d;
 		}
-		System.out.println();
-		inp.close();
+		
+		System.out.println(sum);	
+
 	}
 
 }
