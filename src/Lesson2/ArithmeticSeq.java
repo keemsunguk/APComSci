@@ -48,12 +48,15 @@ public class ArithmeticSeq {
 		System.out.println("The sequence is:");	
 		
 		int sum = start;
+		int series_sum = start;
 		for(int i = 1; i < end; i++) {
 			System.out.print(sum+", ");	
 			sum = sum + d;
+			series_sum += sum;
 		}
 		
 		System.out.println(sum);	
+		System.out.println("Series is:"+series_sum);	
 
 	}
 
